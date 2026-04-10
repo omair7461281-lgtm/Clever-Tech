@@ -398,31 +398,31 @@ body {
         padding: 60px 0;
         min-height: auto;
     }
-    
+
     .hero-content {
         flex-direction: column;
         gap: 40px;
         text-align: center;
     }
-    
+
     .hero-title {
         font-size: 36px;
     }
-    
+
     .hero-description {
         font-size: 16px;
         margin: 0 auto 30px auto;
     }
-    
+
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .team-image-container {
         max-width: 100%;
     }
-    
+
     .social-icons {
         position: static;
         margin-top: 20px;
@@ -434,21 +434,22 @@ body {
     .hero-title {
         font-size: 28px;
     }
-    
+
     .hero-description {
         font-size: 14px;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
-    .btn-primary, .btn-secondary {
+
+    .btn-primary,
+    .btn-secondary {
         width: 100%;
         text-align: center;
     }
-    
+
     .tech-company {
         justify-content: center;
     }
@@ -602,37 +603,37 @@ body {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .about-left {
         order: 2;
         position: static;
     }
-    
+
     .about-right {
         order: 1;
         text-align: center;
         padding-top: 0;
     }
-    
+
     .image-row {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    
+
     .image-card2 {
         position: static;
         margin-top: 20px;
     }
-    
+
     .about-badge {
         justify-content: center;
     }
-    
+
     .about-title {
         font-size: 32px;
     }
-    
+
     .stat-number {
         font-size: 36px;
     }
@@ -642,11 +643,11 @@ body {
     .about-title {
         font-size: 28px;
     }
-    
+
     .about-section {
         padding: 60px 0;
     }
-    
+
     .stats-card {
         padding: 20px;
     }
@@ -781,20 +782,20 @@ body {
     .services-section {
         padding: 60px 0;
     }
-    
+
     .services-title {
         font-size: 36px;
     }
-    
+
     .services-subtitle {
         font-size: 16px;
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
     }
-    
+
     .service-card {
         padding: 30px 20px;
     }
@@ -804,37 +805,37 @@ body {
     .services-section {
         padding: 40px 0;
     }
-    
+
     .services-title {
         font-size: 28px;
     }
-    
+
     .services-subtitle {
         font-size: 15px;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .service-card {
         padding: 25px 20px;
     }
-    
+
     .service-icon {
         width: 60px;
         height: 60px;
     }
-    
+
     .service-icon i {
         font-size: 24px;
     }
-    
+
     .service-title {
         font-size: 20px;
     }
-    
+
     .service-description {
         font-size: 15px;
     }
@@ -1193,20 +1194,20 @@ body {
     .projects-section {
         padding: 60px 0;
     }
-    
+
     .projects-title {
         font-size: 36px;
     }
-    
+
     .projects-description {
         font-size: 16px;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .project-card {
         height: auto;
         min-height: 400px;
@@ -1217,24 +1218,24 @@ body {
     .projects-section {
         padding: 40px 0;
     }
-    
+
     .projects-title {
         font-size: 28px;
     }
-    
+
     .projects-description {
         font-size: 15px;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .project-card {
         padding: 25px 20px;
     }
-    
+
     .project-large {
         height: 300px;
     }
@@ -1246,28 +1247,29 @@ body {
         padding: 60px 0;
         margin: 40px 0;
     }
-    
+
     .subscription-container {
         padding: 60px 40px;
         margin: 0 20px;
     }
-    
+
     .subscription-title {
         font-size: 36px;
     }
-    
+
     .subscription-description {
         font-size: 16px;
         margin-bottom: 40px;
     }
-    
+
     .subscription-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
     }
-    
-    .btn-join, .btn-contact {
+
+    .btn-join,
+    .btn-contact {
         width: 100%;
         max-width: 300px;
     }
@@ -1278,33 +1280,34 @@ body {
         padding: 40px 0;
         margin: 30px 0;
     }
-    
+
     .subscription-container {
         padding: 40px 30px;
         margin: 0 15px;
         border-radius: 20px;
     }
-    
+
     .subscription-title {
         font-size: 28px;
         margin-bottom: 20px;
     }
-    
+
     .subscription-description {
         font-size: 15px;
         margin-bottom: 30px;
     }
-    
+
     .subscription-badge {
         margin-bottom: 30px;
         padding: 6px 16px;
     }
-    
+
     .subscription-badge span {
         font-size: 13px;
     }
-    
-    .btn-join, .btn-contact {
+
+    .btn-join,
+    .btn-contact {
         padding: 15px 30px;
         font-size: 15px;
     }
@@ -1463,48 +1466,237 @@ body {
 }
 
 
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: 150px 0;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonials-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f4ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonials-badge img {
+    width: 20px;
+    height: 20px;
+}
+
+.testimonials-badge span {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.testimonials-title {
+    font-size: 55px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.testimonials-description {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: white;
+    border: 2px solid #4F61FF;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.stars i {
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+.author-title {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.quote-mark {
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    font-size: 80px;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4F61FF;
+    width: 12px;
+    border-radius: 6px;
+}
+
+/* Responsive Design for Testimonials Section */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    .testimonials-title {
+        font-size: 36px;
+    }
+
+    .testimonials-description {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .testimonial-card {
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 40px 0;
+    }
+
+    .testimonials-title {
+        font-size: 28px;
+    }
+
+    .testimonials-description {
+        font-size: 15px;
+    }
+
+    .testimonial-card {
+        padding: 25px 20px;
+    }
+
+    .quote-mark {
+        font-size: 36px;
+    }
+}
+
 /* Responsive Design for Experts Section */
 @media (max-width: 768px) {
     .experts-section {
         padding: 60px 0;
     }
-    
+
     .experts-title {
         font-size: 36px;
     }
-    
+
     .experts-description {
         font-size: 16px;
         margin-bottom: 50px;
     }
-    
+
     .experts-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
-    
+
     .expert-image-container {
         height: 350px;
     }
-    
+
     .expert-name {
         font-size: 20px;
     }
-    
+
     .expert-title {
         font-size: 14px;
     }
-    
+
     .expert-social-icons {
         left: -15px;
         gap: 8px;
     }
-    
+
     .expert-social-icon {
         width: 35px;
         height: 35px;
     }
-    
+
     .expert-social-icon i {
         font-size: 16px;
     }
@@ -1514,33 +1706,33 @@ body {
     .experts-section {
         padding: 40px 0;
     }
-    
+
     .experts-title {
         font-size: 28px;
     }
-    
+
     .experts-description {
         font-size: 15px;
         margin-bottom: 40px;
     }
-    
+
     .experts-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .expert-image-container {
         height: 300px;
     }
-    
+
     .expert-overlay {
         padding: 25px 15px 15px;
     }
-    
+
     .expert-name {
         font-size: 18px;
     }
-    
+
     .expert-title {
         font-size: 13px;
     }
@@ -1745,43 +1937,43 @@ body {
     .pricing-section {
         padding: 60px 0;
     }
-    
+
     .pricing-title {
         font-size: 36px;
     }
-    
+
     .pricing-description {
         font-size: 16px;
         margin-bottom: 50px;
     }
-    
+
     .pricing-cards {
         flex-direction: column;
         align-items: center;
         gap: 25px;
     }
-    
+
     .pricing-card {
         width: 100%;
         max-width: 400px;
     }
-    
+
     .pricing-card-header {
         padding: 30px 25px 25px;
     }
-    
+
     .pricing-plan-name {
         font-size: 22px;
     }
-    
+
     .price-amount {
         font-size: 42px;
     }
-    
+
     .pricing-features {
         padding: 0 25px;
     }
-    
+
     .btn-pricing {
         margin: 25px;
         padding: 14px 28px;
@@ -1792,62 +1984,453 @@ body {
     .pricing-section {
         padding: 40px 0;
     }
-    
+
     .pricing-title {
         font-size: 28px;
     }
-    
+
     .pricing-description {
         font-size: 15px;
         margin-bottom: 40px;
     }
-    
+
     .pricing-cards {
         gap: 20px;
     }
-    
+
     .pricing-card {
         width: 100%;
         max-width: 350px;
     }
-    
+
     .pricing-card-header {
         padding: 25px 20px 20px;
     }
-    
+
     .pricing-plan-name {
         font-size: 20px;
     }
-    
+
     .price-amount {
         font-size: 36px;
     }
-    
-    
+
+
     .price-period {
         font-size: 14px;
     }
-    
+
     .pricing-card .pricing-description {
         font-size: 15px;
     }
-    
+
     .pricing-features {
         padding: 0 20px;
     }
-    
+
     .feature-item {
         font-size: 15px;
         margin-bottom: 14px;
     }
-    
+
     .feature-item i {
         font-size: 16px;
     }
-    
+
     .btn-pricing {
         margin: 20px;
         padding: 12px 24px;
         font-size: 15px;
+    }
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 150px 0;
+    margin: 0;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-right {
+    flex: 1;
+}
+
+.contact-form-container {
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid #4F61FF;
+}
+
+.contact-form-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+#label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4F61FF;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(79, 97, 255, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #6c757d;
+}
+
+.btn-send-message {
+    background: #4F61FF;
+    color: white;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(79, 97, 255, 0.3);
+}
+
+.btn-send-message:hover {
+    background: #3d4ee8;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(79, 97, 255, 0.4);
+}
+
+.contact-promo {
+    padding: 20px;
+}
+
+.contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f4ff;
+    padding: 12px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+
+.contact-promo-title {
+    font-size: 52px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.contact-promo-description {
+    font-size: 18px;
+    color: black;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 80px 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-form-container {
+        padding: 40px 30px;
+    }
+
+    .contact-form-title {
+        font-size: 28px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-promo-title {
+        font-size: 36px;
+    }
+
+    .contact-promo-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+
+    .contact-form-title {
+        font-size: 24px;
+    }
+
+    .contact-promo-title {
+        font-size: 28px;
+    }
+
+    .contact-promo-description {
+        font-size: 15px;
+    }
+
+    .form-group input {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .btn-send-message {
+        padding: 16px 30px;
+        font-size: 15px;
+    }
+}
+
+/* FAQs Section Styles */
+.faqs-section {
+    padding: 50px 0;
+    margin: 0;
+}
+
+.faqs-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faqs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f4ff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.faqs-badge img {
+    width: 20px;
+    height: 20px;
+}
+
+.faqs-badge span {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+
+.faqs-title {
+    font-size: 55px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.faqs-description {
+    font-size: 17px;
+    color: black;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: center;
+}
+
+.faqs-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.faqs-left {
+    flex: 1;
+}
+
+.faq-image {
+    width: 575px;
+    height: 601px;
+    border-radius: 20px;
+}
+
+.faqs-right {
+    flex: 1.2;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: 2px solid #4F61FF;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 20px 25px;
+    background: white;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    background: #4F61FF;
+    color: white;
+}
+
+.accordion-button.active {
+    background: #4F61FF;
+    color: white;
+}
+
+.accordion-button i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-collapse.show {
+    max-height: 300px;
+}
+
+.accordion-body {
+    padding: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Responsive Design for FAQ Section */
+@media (max-width: 768px) {
+    .faqs-section {
+        padding: 60px 0;
+    }
+
+    .faqs-content {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .faqs-left {
+        order: 2;
+    }
+
+    .faqs-right {
+        order: 1;
+    }
+
+    .faq-image {
+        max-width: 100%;
+    }
+
+    .accordion-button {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+
+    .accordion-body {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .faqs-section {
+        padding: 40px 0;
+    }
+
+    .faqs-title {
+        font-size: 36px;
+    }
+
+    .faqs-description {
+        font-size: 15px;
+    }
+
+    .accordion-button {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    .accordion-body {
+        padding: 18px;
+        font-size: 13px;
     }
 }
