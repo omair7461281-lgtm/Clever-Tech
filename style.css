@@ -2047,7 +2047,7 @@ body {
 /* Responsive Design for Testimonials Section */
 @media (max-width: 768px) {
     .testimonials-section {
-        padding: 60px 0;
+        padding: 60px 20px;
     }
 
     .testimonials-title {
@@ -2080,7 +2080,7 @@ body {
 
 @media (max-width: 480px) {
     .testimonials-section {
-        padding: 40px 0;
+        padding: 40px 20px;
     }
 
     .testimonials-title {
@@ -2103,7 +2103,7 @@ body {
 /* Responsive Design for Experts Section */
 @media (max-width: 768px) {
     .experts-section {
-        padding: 0px 0;
+        padding: 0px 20px;
     }
 
     .experts-title {
@@ -2174,7 +2174,7 @@ body {
 
 @media (max-width: 480px) {
     .experts-section {
-        padding: 0px 0;
+        padding: 0px 20px;
     }
 
     .experts-title {
@@ -2395,7 +2395,7 @@ body {
 /* Responsive Design for Pricing Section */
 @media (max-width: 768px) {
     .pricing-section {
-        padding: 0px 0;
+        padding: 0px 20px;
     }
 
     .pricing-title {
@@ -2442,7 +2442,7 @@ body {
 
 @media (max-width: 480px) {
     .pricing-section {
-        padding: 0px 0;
+        padding: 0px 20px;
     }
 
     .pricing-title {
