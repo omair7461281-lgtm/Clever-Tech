@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileNavToggle.addEventListener('click', function () {
             navmenu.classList.toggle('active');
             mobileNavToggle.classList.toggle('active');
-            
+
             // Hide/show Get Started button on mobile
             if (getStartedBtn) {
                 getStartedBtn.classList.toggle('hidden');
@@ -66,6 +66,67 @@ document.addEventListener('DOMContentLoaded', function () {
                     getStartedBtn.classList.remove('hidden');
                 }
             }
+        });
+    }
+
+    // Header scroll blur effect
+    const header = document.querySelector('#header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > 50) {
+            header.style.backdropFilter = 'blur(5px)';
+            header.style.backgroundColor = 'rgba(79, 97, 255, 0.2)';
+        } else {
+            header.style.backdropFilter = 'none';
+            header.style.backgroundColor = 'rgba(79, 97, 255, 0.2)';
+        }
+
+        lastScrollTop = scrollTop;
+    });
+
+    // Testimonial Slider functionality
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    const cardsPerPage = 3; // Show 3 cards at a time
+    let totalSlides = Math.ceil(testimonialCards.length / cardsPerPage);
+
+    function showSlide(index) {
+        // Hide all cards
+        testimonialCards.forEach(card => {
+            card.style.display = 'none';
+        });
+
+        // Calculate which cards to show (overlapping groups)
+        const startIndex = index; // Start from the dot number
+        const endIndex = Math.min(startIndex + 3, testimonialCards.length); // Show 3 cards
+
+        // Show current set of cards
+        for (let i = startIndex; i < endIndex; i++) {
+            testimonialCards[i].style.display = 'flex';
+        }
+
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+
+        currentSlide = index;
+    }
+
+    // Initialize slider
+    if (testimonialCards.length > 0 && dots.length > 0) {
+        // Show first slide initially
+        showSlide(0);
+
+        // Add click handlers to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
         });
     }
 });
