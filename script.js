@@ -87,46 +87,75 @@ document.addEventListener('DOMContentLoaded', function () {
         lastScrollTop = scrollTop;
     });
 
-    // Testimonial Slider functionality
+    // Testimonial Slider functionality with smooth sliding
+    const testimonialsWrapper = document.querySelector('.testimonials-wrapper');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
     let currentSlide = 0;
-    const cardsPerPage = 3; // Show 3 cards at a time
-    let totalSlides = Math.ceil(testimonialCards.length / cardsPerPage);
+    let autoSlideInterval;
 
-    function showSlide(index) {
-        // Hide all cards
-        testimonialCards.forEach(card => {
-            card.style.display = 'none';
-        });
+    if (testimonialsWrapper && testimonialCards.length > 0) {
+        // Calculate card width and gap
+        const cardWidth = 350; // min-width from CSS
+        const gap = 30; // gap from CSS
+        const cardsPerView = 3; // Number of cards visible at once
+        const slideWidth = cardWidth + gap;
 
-        // Calculate which cards to show (overlapping groups)
-        const startIndex = index; // Start from the dot number
-        const endIndex = Math.min(startIndex + 3, testimonialCards.length); // Show 3 cards
-
-        // Show current set of cards
-        for (let i = startIndex; i < endIndex; i++) {
-            testimonialCards[i].style.display = 'flex';
+        function slideToIndex(index) {
+            // Calculate the maximum slide index
+            const maxSlide = Math.max(0, testimonialCards.length - cardsPerView);
+            
+            // Ensure index is within bounds
+            index = Math.max(0, Math.min(index, maxSlide));
+            
+            // Apply smooth slide transformation
+            const offset = -index * slideWidth;
+            testimonialsWrapper.style.transform = `translateX(${offset}px)`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
         }
 
-        // Update dots
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
+        function nextSlide() {
+            const maxSlide = Math.max(0, testimonialCards.length - cardsPerView);
+            const nextIndex = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            slideToIndex(nextIndex);
+        }
 
-        currentSlide = index;
-    }
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 4000); // Slide every 4 seconds
+        }
 
-    // Initialize slider
-    if (testimonialCards.length > 0 && dots.length > 0) {
-        // Show first slide initially
-        showSlide(0);
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+            }
+        }
+
+        // Initialize slider
+        slideToIndex(0);
+        startAutoSlide();
 
         // Add click handlers to dots
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                showSlide(index);
+                stopAutoSlide();
+                slideToIndex(index);
+                startAutoSlide();
             });
+        });
+
+        // Pause on hover
+        testimonialsWrapper.addEventListener('mouseenter', stopAutoSlide);
+        testimonialsWrapper.addEventListener('mouseleave', startAutoSlide);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            slideToIndex(currentSlide);
         });
     }
 });

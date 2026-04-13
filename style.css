@@ -1763,11 +1763,18 @@ body {
 }
 
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
 }
 
 .testimonial-card {
@@ -1778,12 +1785,14 @@ body {
     position: relative;
     transition: all 0.3s ease;
     height: 250px;
+    width: 350px;
     display: flex;
     flex-direction: column;
+    min-width: 360px;
+    flex-shrink: 0;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-8px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -1868,13 +1877,21 @@ body {
     }
 
     .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .testimonials-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .testimonial-card {
         height: auto;
         min-height: 200px;
+        min-width: 300px;
     }
 }
 
