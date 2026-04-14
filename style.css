@@ -710,7 +710,6 @@ body {
     height: auto;
     min-width: 130px;
     z-index: 10;
-    display: none;
 }
 .social-icon {
     width: 20px;
@@ -803,17 +802,6 @@ body {
     flex-direction: column;
     gap: 20px;
     position: relative;
-}
-
-/* Desktop and Mobile About Content Visibility */
-.desktop-about-content {
-    display: none;
-}
-
-.mobile-about-image {
-    width: 100%;
-    height: auto;
-    border-radius: 14px;
 }
 
 .image-row {
