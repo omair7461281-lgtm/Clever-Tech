@@ -145,6 +145,40 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set active link on page load
     setActiveOnScroll();
 
+    // Smooth scrolling for footer links
+    const footerLinks = document.querySelectorAll('.footer-list a[href^="#"]');
+    
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerHeight = header.offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Update active state in navigation
+                updateActiveLink(targetId);
+                
+                // Close mobile menu if open
+                if (navmenu.classList.contains('active')) {
+                    navmenu.classList.remove('active');
+                    mobileNavToggle.classList.remove('active');
+                    if (getStartedBtn) {
+                        getStartedBtn.classList.remove('hidden');
+                    }
+                }
+            }
+        });
+    });
+
     // Testimonial Slider functionality with smooth sliding
     const testimonialsWrapper = document.querySelector('.testimonials-wrapper');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
