@@ -215,6 +215,104 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', () => {
             slideToIndex(currentSlide);
         });
+
+        // Mouse drag functionality
+        let isDragging = false;
+        let startX = 0;
+        let currentX = 0;
+        let dragStartIndex = 0;
+
+        testimonialsWrapper.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            dragStartIndex = currentSlide;
+            testimonialsWrapper.style.cursor = 'grabbing';
+            testimonialsWrapper.style.userSelect = 'none';
+            stopAutoSlide();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            e.preventDefault();
+            currentX = e.clientX;
+            const diff = currentX - startX;
+            const dragOffset = -dragStartIndex * slideWidth + diff;
+            
+            testimonialsWrapper.style.transform = `translateX(${dragOffset}px)`;
+        });
+
+        document.addEventListener('mouseup', (e) => {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            testimonialsWrapper.style.cursor = 'grab';
+            testimonialsWrapper.style.userSelect = 'auto';
+            
+            const diff = currentX - startX;
+            const threshold = slideWidth / 3; // Drag threshold
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    // Dragged right - go to previous slide
+                    const prevIndex = Math.max(0, currentSlide - 1);
+                    slideToIndex(prevIndex);
+                } else {
+                    // Dragged left - go to next slide
+                    const maxSlide = Math.max(0, testimonialCards.length - cardsPerView);
+                    const nextIndex = Math.min(maxSlide, currentSlide + 1);
+                    slideToIndex(nextIndex);
+                }
+            } else {
+                // Didn't drag far enough - return to current slide
+                slideToIndex(currentSlide);
+            }
+            
+            startAutoSlide();
+        });
+
+        // Touch events for mobile
+        testimonialsWrapper.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            dragStartIndex = currentSlide;
+            stopAutoSlide();
+        });
+
+        testimonialsWrapper.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            e.preventDefault();
+            currentX = e.touches[0].clientX;
+            const diff = currentX - startX;
+            const dragOffset = -dragStartIndex * slideWidth + diff;
+            
+            testimonialsWrapper.style.transform = `translateX(${dragOffset}px)`;
+        });
+
+        testimonialsWrapper.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            
+            const diff = currentX - startX;
+            const threshold = slideWidth / 3;
+            
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    const prevIndex = Math.max(0, currentSlide - 1);
+                    slideToIndex(prevIndex);
+                } else {
+                    const maxSlide = Math.max(0, testimonialCards.length - cardsPerView);
+                    const nextIndex = Math.min(maxSlide, currentSlide + 1);
+                    slideToIndex(nextIndex);
+                }
+            } else {
+                slideToIndex(currentSlide);
+            }
+            
+            startAutoSlide();
+        });
     }
 });
 // END FAQ Accordion functionality
