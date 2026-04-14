@@ -1542,6 +1542,7 @@ body {
     transition: all 0.3s ease;
     display: inline-block;
     align-self: flex-start;
+    margin-top: 16px;
 }
 
 .btn-learn-more:hover {
@@ -2118,7 +2119,7 @@ body {
 /* Responsive Design for Experts Section */
 @media (max-width: 768px) {
     .experts-section {
-        padding: 0px 20px;
+        padding: 30px 20px;
     }
 
     .experts-title {
