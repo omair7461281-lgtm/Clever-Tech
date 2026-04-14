@@ -2960,20 +2960,22 @@ body {
 }
 
 .footer-brand {
-    flex: 1;
-    max-width: 350px;
+flex: 1;
+max-width: 350px;
 }
 
 .footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 20px;
+text-decoration: none;
 }
 
 .footer-logo img {
-    width: 38px;
-    height: 40px;
+width: 38px;
+height: 40px;
+border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -2984,7 +2986,7 @@ body {
 }
 
 .footer-description {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     color: black;
     margin: 0;
@@ -3189,7 +3191,7 @@ body {
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
